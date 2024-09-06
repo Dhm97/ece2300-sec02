@@ -10,6 +10,13 @@ module PairTripleDetector
   output wire out
 );
 
+  wire x,y,w;
+
+  or(w, in0, in1);
+  and(x, in0, in1);
+  and(y, in2, w);
+  or(out, y, x);
+
   // '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
   // Discussion Section Task
   // '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
